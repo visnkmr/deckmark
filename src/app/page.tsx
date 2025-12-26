@@ -14,6 +14,7 @@ export default function Home() {
     
     const saved = localStorage.getItem(`hero-${tabId}`);
     if (saved) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setHeroText(saved);
       setTimeout(() => {
         document.title = saved;
