@@ -8,6 +8,7 @@ const withPWA = require('next-pwa')({
 const nextConfig = {
   // Enable static export
   output: 'export',
+  assetPrefix:'/deckmark',
   // Disable image optimization for static export
   images: {
     unoptimized: true
@@ -15,7 +16,8 @@ const nextConfig = {
   // Ensure trailing slashes for static hosting
   trailingSlash: true,
   // Disable server-side features for static export
-  distDir: 'out'
+  distDir: 'out',
+  turbopack: {}
 };
 
 module.exports = withPWA(nextConfig);
