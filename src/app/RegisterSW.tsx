@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 export default function RegisterSW() {
   useEffect(() => {
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
+      navigator.serviceWorker.register('/deckmark/sw.js')
         .then((registration) => {
           console.log('SW registered: ', registration)
         })

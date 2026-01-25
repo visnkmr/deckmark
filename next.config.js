@@ -1,11 +1,13 @@
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const withPWA = require('next-pwa')({
   dest: 'public',
-  disable: process.env.NODE_ENV === 'development'
+  disable: process.env.NODE_ENV === 'development',
+  basePath: '/deckmark',
 });
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: '/deckmark',
   // Enable static export
   output: 'export',
   assetPrefix:'/deckmark',
